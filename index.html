@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ex currency converter</title>
+    
+    <link rel="stylesheet" href="lib/fa/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body onload="onInit()" onkeydown="onKeyDown(event)">
+    <header>
+        <main>
+            <h2><i class="fab fa-cuttlefish"></i>urrency converter</h2>
+        </main>
+    </header>
+    <section class="converter-container">
+        <!-- <div class="amount-container"> -->
+        <input type="number" placeholder="Amount" class="amount" value="1">
+        <!-- </div> -->
+
+
+        <div class="from-to-container">
+            <div class="curr1-container">
+                <label for="curr1">from</label>
+                <input list="curr1" value="USD" class="curr1">
+                <datalist id="curr1">
+                    <option value="USD" selected>
+                    <option value="ILS"> ILSSS</option>
+                    <option value="PHP">
+                    <option value="EUR">
+                </datalist>
+            </div>
+
+
+            <div class="between" onclick="onSwapCurrencies()">
+                    <label for="">label</label>
+                    <i class="fas fa-exchange-alt"></i>
+            </div>
+
+            <div class="curr2-container">
+                <label for="curr2">to</label>
+                <input list="curr2" value="ILS" class="curr2">
+                <datalist id="curr2">
+                    <option value="ILS">
+                    <option value="PHP">
+                    <option value="EUR">
+                </datalist>
+            </div>
+
+        </div>
+
+        <div class="calc-container">
+            <button onclick="onConvert()">Convert</button>
+        </div>
+
+        <div class="res-container">
+            <!-- 1678$ -->
+        </div>
+
+    </section>
+
+    <!-- <footer>
+        footer
+    </footer> -->
+
+    <!-- <img src="media/flags/usd.png" alt=""> -->
+
+    <script src="js/converter-service.js"></script>
+    <script src="js/converter-controller.js"></script>
+</body>
+
+</html>
